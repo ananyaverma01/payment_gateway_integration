@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Foundation</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="content">
+
+
+            <div class="logo">
+
+                <a href="#">HOPE FOUNDATION</a>
+            </div>
+
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#section2">About</a></li>
+                <li><a href="https://rzp.io/l/9QrEbke">Donate</a></li>
+                <li><a href="Form.html">Contact</a></li>
+            </ul>
+
+
+            <div class="icon menu-btn">
+
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="banner">
+
+        <div class="contact">
+            <button class="noselect" onclick="window.location.href = '#donate';">DONATE</button>
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <section id="section2" class="section2">
+        <div class="heading">
+            <h1><u>ABOUT THE SITE</u></h1>
+        </div>
+
+        <div class="content">
+            <div class="content1">
+                <p>We have been working for a great future of these little childrens. We work in the best interest of child.We strongly believe that every child deserves the best chance for a bright future, which is why, we are fiercely committed to ensure
+                    that children not only survive, but thrive.It enables individuals and organizations to raise and donate funds conveniently to any cause they care about, with offerings.
+                </p>
+            </div>
+
+
+
+            <div id="donate">
+                <div class="donate_lines">
+
+                    <div class="buttons">
+                        <div class="container">
+                            <a href="https://rzp.io/l/9QrEbke" class="btn effect01"><span>Donate Now</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script>
+        const body = document.querySelector("body ");
+        const navbar = document.querySelector(".navbar ");
+        const menuBtn = document.querySelector(".menu-btn ");
+        const cancelBtn = document.querySelector(".cancel-btn ");
+        menuBtn.onclick = () => {
+            navbar.classList.add("show ");
+            menuBtn.classList.add("hide ");
+            body.classList.add("disabled ");
+        }
+        cancelBtn.onclick = () => {
+            body.classList.remove("disabled ");
+            navbar.classList.remove("show ");
+            menuBtn.classList.remove("hide ");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky ") : navbar.classList.remove("sticky ");
+        }
+    </script>
+</body>
+
+</html>
